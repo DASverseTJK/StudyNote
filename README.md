@@ -25,12 +25,21 @@
    - JWT
      - JWT does not have to remember anything and do not have to find any information because JWT(token) contains all the information that they need.
 
-- Header, Payload, Signature
+- Header, Payload, Signature (separated by '.')
+- 
 ![1](https://github.com/DASverseTJK/StudyNote/assets/131336470/677e5bd6-5fcc-45d9-ba69-d367d06e7049)
 
   - Header
     - Algorithm to use encode and decode
   - Payload
     - Data ( all the information in token )
-  - Signature
-    - MOST IMPORTANT: verifies token hasn't been changed before client sends back to server
+    - iat : issue at; when the token is created
+      -  Can be used to expire the token
+  - Signature (MOST IMPORTANT)
+    - verifies token hasn't been changed before client sends back to server
+    - In encoded key:
+      - format : header.payload.signature
+      - server will decode header.payload and hash it to compare with your secret key.
+      - User will not get signature section so that only server can validate other people's token.
+      - Warning: if your secret key, signature, is stolen, anyone can hack your user's key
+
