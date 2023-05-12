@@ -1,6 +1,7 @@
 # StudyNote
 
 === JWT ===
+reference : https://www.youtube.com/watch?v=7Q17ubqLfaM
 - What is JWT?
   -  Just for Authorization, not Authentication
     - Authroization  : Mkaing sure who sends requests to your server is same user during Authentication
@@ -43,3 +44,10 @@
       - User will not get signature section so that only server can validate other people's token.
       - Warning: if your secret key, signature, is stolen, anyone can hack your user's key
 
+
+- JWT is Amazing!
+- ![1](https://github.com/DASverseTJK/StudyNote/assets/131336470/1371ba4e-2046-44b6-9f45-189411bf4882)
+- If you use session key, client has to log in "bank" and "retirement" twice, but if user shares same JWT to "bank" and "retirement", user will be authenticated to both server and do not have to log back in.
+  - how this works?
+    - because user saves the token not the server! Meaning many different servers do not have to do anything because user is holding the token
+    - For example, let's say there are two different doorlocks(server) and user has masterkey(JWT) that works with both of doorlocks, then user do not have to use two separate keys.
