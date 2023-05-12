@@ -1,0 +1,17 @@
+{
+  "name": "jwt-authentication-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server1.js",
+  "scripts": {
+    "devStart": "nodemon server1.js",
+    "devStartAuth": "nodemon authServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "jsonwebtoken": "^9.0.0"
+  }
+}

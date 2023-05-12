@@ -1,0 +1,33 @@
+// prevent everyone to access our posts website. Only allow specific users
+GET http://localhost:3000/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGoiLCJpYXQiOjE2ODM4Nzc1MjEsImV4cCI6MTY4Mzg3NzU1MX0.JI1hcWwdWPngZoV9Dpyxj0zj38qk1OZRXiB9RvzV364
+
+###
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGoiLCJpYXQiOjE2ODM4Nzc5Mjl9.evHsUMbVJFB_s5NTt3Gg7NAr0Q0a8iJQlUpp6sAMw58"
+}
+
+
+
+
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGoiLCJpYXQiOjE2ODM4Nzc5Mjl9.evHsUMbVJFB_s5NTt3Gg7NAr0Q0a8iJQlUpp6sAMw58"
+}
+
+
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "tj"
+}
