@@ -2,6 +2,7 @@
 
 === JWT ===
 - reference : https://www.youtube.com/watch?v=7Q17ubqLfaM
+            : https://jwt.io/
 - What is JWT?
   -  Just for Authorization, not Authentication
     - Authroization  : Mkaing sure who sends requests to your server is same user during Authentication
