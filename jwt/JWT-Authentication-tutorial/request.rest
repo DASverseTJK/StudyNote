@@ -1,33 +1,36 @@
 // prevent everyone to access our posts website. Only allow specific users
+### change with accesstoken from login
+// getting post information
+// receive email from login => put the email usert to get usert.uid => put usert.uid to postt to get all of post information.
 GET http://localhost:3000/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGoiLCJpYXQiOjE2ODM4Nzc1MjEsImV4cCI6MTY4Mzg3NzU1MX0.JI1hcWwdWPngZoV9Dpyxj0zj38qk1OZRXiB9RvzV364
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyZW1haWwiOiJ0amtAZ21haWwuY29tIiwiaWF0IjoxNjg0MzAyMTA0LCJleHAiOjE2ODQzMDIyODR9.7jU9ejvlrdc3y2Te_fhTwlH8d2w-TlwlXYWlSpbjA0c
 
-###
+### Change with refreshToken, then it will logout and /token will be forbidden because refreshToken got deleted
+// deleting refreshtoken
 DELETE http://localhost:4000/logout
 Content-Type: application/json
 
 {
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGoiLCJpYXQiOjE2ODM4Nzc5Mjl9.evHsUMbVJFB_s5NTt3Gg7NAr0Q0a8iJQlUpp6sAMw58"
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGoiLCJpYXQiOjE2ODQyMTMxOTN9.IWplIq7Y5gOytq7MH_lVzG1FMqQEyaobqlUGeU55SHI"
 }
 
 
-
-
-###
+### Change with refreshToken from login; needs refreshToken available to get new token, and it is how logout works.
+// re-generating accesstoken to users when accesstoken is expired.
+// outputs accesstoken
 POST http://localhost:4000/token
 Content-Type: application/json
 
 {
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGoiLCJpYXQiOjE2ODM4Nzc5Mjl9.evHsUMbVJFB_s5NTt3Gg7NAr0Q0a8iJQlUpp6sAMw58"
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyZW1haWwiOiJ0amtAZ21haWwuY29tIiwiaWF0IjoxNjg0MzAyMDkxfQ.WA7dDEt-CRi8PaFGFTfNxr3ZAp7XQKNAlRAz2rUlME0"
 }
 
 
 
-###
-
+### Creating accessToken and refreshToken
 POST http://localhost:4000/login
 Content-Type: application/json
 
 {
-    "username" : "tj"
+    "useremail": "tjk@gmail.com"
 }

@@ -1,0 +1,24 @@
+{
+  "name": "jwt_restful_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loginAuthServer.js",
+  "scripts": {
+    "devEmailAuth": "nodemon emailAuthserver.js",
+    "devLoginAuth": "nodemon loginAuthServer.js",
+    "devsignupServer": "nodemon signupServer.js",
+    "devpostServer": "nodemon postServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.2",
+    "nodemon": "^2.0.22"
+  }
+}

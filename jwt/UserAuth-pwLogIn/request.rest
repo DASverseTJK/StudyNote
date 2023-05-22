@@ -1,0 +1,22 @@
+// prevent everyone to access our posts website. Only allow specific users
+GET http://localhost:5000/users
+
+###
+// User has to keep the email format
+POST http://localhost:5000/users/signup
+Content-Type: application/json
+
+{
+    "useremail" : "tj@gmail.com",
+    "password": "pw"
+}
+
+###
+// if password is invalid, it will not go through
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "useremail" : "tjk@gmail.com",
+    "password": "pw"
+}
